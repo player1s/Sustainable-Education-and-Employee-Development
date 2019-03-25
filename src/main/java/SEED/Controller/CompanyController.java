@@ -23,7 +23,7 @@ public class CompanyController {
         return "home";
     }
 
-    @RequestMapping("/gifs/{name}")
+    @RequestMapping("/1")
     public String listSpecGif(@PathVariable String name, ModelMap modelMap) {
         Gif gif = gifRepository.findByName(name);
         modelMap.put("gif", gif);

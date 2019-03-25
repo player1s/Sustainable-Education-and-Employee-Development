@@ -1,9 +1,18 @@
 package SEED.Model;
 
 public class Student {
+    private int id;
     private String firstName;
     private String secondName;
     private University university;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -29,7 +38,8 @@ public class Student {
         this.university = university;
     }
 
-    public Student(String firstName, String secondName, University university) {
+    public Student(int id, String firstName, String secondName, University university) {
+        this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
         this.university = university;

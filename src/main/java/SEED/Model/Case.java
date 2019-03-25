@@ -1,10 +1,9 @@
 package SEED.Model;
 
-import java.util.ArrayList;
-
-public class Company {
+public class Case {
     private int id;
     private String name;
+    private Company company;
 
     public int getId() {
         return id;
@@ -22,9 +21,17 @@ public class Company {
         this.name = name;
     }
 
+    public Company getCompany() {
+        return company;
+    }
 
-    public Company(int id, String name) {
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    public Case(int id, String name, Company company) {
         this.id = id;
         this.name = name;
+        this.company = company;
     }
 }
