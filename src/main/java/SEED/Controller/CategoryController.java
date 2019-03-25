@@ -24,7 +24,7 @@ public class CategoryController {
     public String listCategories(ModelMap modelMap) {
         List<Category> allCategories = categoryRepository.getALL_CATEGORIES();
         modelMap.put("categories", allCategories);
-        return "categories";
+        return "ProfileTypeSelect";
     }
     @RequestMapping("/category/{id}")
     public String Category(@PathVariable int id, ModelMap modelMap){

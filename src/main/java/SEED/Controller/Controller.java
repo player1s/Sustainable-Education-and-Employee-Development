@@ -19,7 +19,7 @@ public class Controller {
     public String listGifs(ModelMap modelMap) {
         List<Gif> allGifs = gifRepository.getAllGifs();
         modelMap.put("gifs", allGifs);
-        return "home";
+        return "ProfileTypeSelect";
     }
 
     @RequestMapping("/gifs/{name}")
