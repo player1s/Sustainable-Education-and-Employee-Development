@@ -1,6 +1,5 @@
 package SEED.Data;
 
-import SEED.Model.Category;
 import SEED.Model.University;
 
 import java.util.Arrays;

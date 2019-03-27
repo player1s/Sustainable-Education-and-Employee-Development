@@ -1,7 +1,6 @@
 package SEED.Data;
 
 import SEED.Model.Case;
-import SEED.Model.Company;
 
 import java.util.Arrays;
 import java.util.List;
