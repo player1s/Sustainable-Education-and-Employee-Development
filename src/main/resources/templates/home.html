@@ -45,11 +45,10 @@
     </div>
     <div class="gifs container">
         <div class="row">
-            <div th:each="gif : ${gifs}" class="col s12 l4">
-                <a th:href="@{'/gifs/' + ${gif.name}}">
-                    <img th:src="@{'/gifs/' + ${gif.name} + '.gif'}" />
-                    <a href="#" th:class="(${gif.favorite} ? 'un' : '') + 'mark favorite'"></a>
-                </a>
+            <tr th:each="company : ${companies}">
+                <td><span th:text="${company.id}"> Title </span></td>
+                <td><span th:text="${company.name}"> Author </span></td>
+            </tr>
             </div>
         </div>
     </div>

@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CaseRepository {
+
     CompanyRepository companyRepository = new CompanyRepository();
     private List<Case> ALL_CASES = Arrays.asList(
             new Case(1, "case1",companyRepository.findById(1)),
@@ -13,7 +14,7 @@ public class CaseRepository {
             new Case( 3,"case2",companyRepository.findById(1))
     );
 
-    public List<Case> getALL_COMPANIES(){
+    public List<Case> getAllElements(){
         return ALL_CASES;
     }
 

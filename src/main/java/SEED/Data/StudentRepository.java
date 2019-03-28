@@ -15,7 +15,7 @@ public class StudentRepository {
             new Student(3,"some", "notAverage",unilist.findById(2))
     );
 
-    public List<Student> getALL_STUDENTS(){
+    public List<Student> getAllElements(){
         return ALL_STUDENTS;
     }
 

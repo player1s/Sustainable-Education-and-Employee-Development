@@ -5,14 +5,14 @@ import SEED.Model.Company;
 import java.util.Arrays;
 import java.util.List;
 
-public class CompanyRepository {
+public class CompanyRepository{
     private List<Company> ALL_COMPANIES = Arrays.asList(
             new Company(1, "Company1"),
             new Company( 2,"Company2"),
             new Company( 3,"Company3")
     );
 
-    public List<Company> getALL_COMPANIES(){
+    public List<Company> getAllElements(){
         return ALL_COMPANIES;
     }
 

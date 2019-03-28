@@ -12,7 +12,7 @@ public class UniversityRepository {
             new University( 3,"bakony")
     );
 
-    public List<University> getAllUniversities(){
+    public List<University> getAllElements(){
         return ALL_UNIVERSITIES;
     }
 

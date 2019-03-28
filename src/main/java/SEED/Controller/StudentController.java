@@ -1,7 +1,5 @@
 package SEED.Controller;
 
-import SEED.Data.GifRepository;
-import SEED.Model.Gif;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -12,7 +10,7 @@ import java.util.List;
 
 @Controller
 public class StudentController {
-
+/*
     @Autowired
     private GifRepository gifRepository;
 
@@ -21,14 +19,5 @@ public class StudentController {
         List<Gif> allGifs = gifRepository.getAllGifs();
         modelMap.put("gifs", allGifs);
         return "home";
-    }
-
-    @RequestMapping("2")
-    public String listSpecGif(@PathVariable String name, ModelMap modelMap) {
-        Gif gif = gifRepository.findByName(name);
-        modelMap.put("gif", gif);
-        return "gif-details";
-    }
-
-
+    }*/
 }
