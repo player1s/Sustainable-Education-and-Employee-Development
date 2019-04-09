@@ -1,24 +1,17 @@
 package SEED.Model;
 
 public class Case {
-    private int id;
-    private String name;
-    private Company company;
+	private String caseName;
+    private University uni;
+    private Company comName;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
+   
+    public String getCaseName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCaseName(String caseName) {
+        this.caseName = caseName;
     }
 
     public Company getCompany() {
@@ -28,10 +21,20 @@ public class Case {
     public void setCompany(Company company) {
         this.company = company;
     }
+    
+    public void setUniversity(University uni)
+    {
+    	this.uni = uni;
+    }
+    
+    public void getUniversity()
+    {
+    	return uni;
+    }
 
-    public Case(int id, String name, Company company) {
-        this.id = id;
+    public Case(String name, Company company, University uni) {
         this.name = name;
         this.company = company;
+        this.uni = uni;
     }
 }
