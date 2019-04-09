@@ -1,17 +1,36 @@
 package SEED.Model;
 
-public class Case {
-	private String caseName;
-    private University uni;
-    private Company comName;
+import java.util.ArrayList;
 
-   
-    public String getCaseName() {
-        return name;
+public class Case {
+    private int id;
+    private String caseName;
+    private Company company;
+    private ArrayList<Student> studentList;
+
+    
+    public Case(int id, String name, Company company) {
+        this.id = id;
+        this.caseName = name;
+        this.company = company;
+        studentList = new ArrayList<Student>();
+        
+    }
+    
+    public int getId() {
+        return id;
     }
 
-    public void setCaseName(String caseName) {
-        this.caseName = caseName;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return caseName;
+    }
+
+    public void setName(String name) {
+        this.caseName = name;
     }
 
     public Company getCompany() {
@@ -21,20 +40,15 @@ public class Case {
     public void setCompany(Company company) {
         this.company = company;
     }
-    
-    public void setUniversity(University uni)
-    {
-    	this.uni = uni;
-    }
-    
-    public void getUniversity()
-    {
-    	return uni;
+
+
+    public  ArrayList<Student> getStudentList() {
+        return studentList;
     }
 
-    public Case(String name, Company company, University uni) {
-        this.name = name;
-        this.company = company;
-        this.uni = uni;
+    public void setStudentList(ArrayList<Student> studentList) {
+        this.studentList = studentList;
     }
+    
+    
 }
