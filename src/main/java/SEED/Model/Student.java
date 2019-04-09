@@ -1,7 +1,11 @@
 package SEED.Model;
 
-public class Student {
-    
+import java.util.List;
+
+public class Student
+
+{
+	
     private String firstName;
 
     private University university;
@@ -28,5 +32,7 @@ public class Student {
         this.firstName = firstName;
       
         this.university = university;
+        
+        
     }
 }
