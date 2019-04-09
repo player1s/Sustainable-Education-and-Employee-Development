@@ -2,6 +2,7 @@ package SEED.Data;
 
 import SEED.Model.Student;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -43,14 +44,14 @@ public class StudentRepository {
 	}
 
 	// Update a company
-	public Company updateCompany(int id) {
-		for (Company Company : ALL_COMPANIES) {
-			if (id == Company.getId())
-				return company;
-
+	public void updateStudentById(int id, String studentName, ArrayList<University> ALL_UNIVERSITIES) {
+		Company c = getById(id);
+		try {
+			c.setId(id);
+			c.setName(studentName);
+			c.setUniversity(ALL_UNIVERSITIES);
+		} catch (NullPointerException e) {
+			System.out.print("Caught NullPointerException");
 		}
-
-		return null;
-	}
 
 }
