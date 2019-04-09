@@ -39,9 +39,9 @@ public class CompanyRepository
 
 		for (Company Company : ALL_COMPANIES) {
 			if (id == Company.getId())
-				return Company;
+				 ALL_COMPANIES.remove(comp);
 		}
-		return ALL_COMPANIES.remove(comp);
+		return null;
 
 	}
 

@@ -37,10 +37,9 @@ public class StudentRepository {
 
 		for (Student student : ALL_COMPANIES) {
 			if (id == Student.getId())
-				return Student;
+				 ALL_COMPANIES.remove(comp);
 		}
-		return ALL_STUDENTS.remove(Student);
-
+		return null;
 	}
 
 	// Update a company
