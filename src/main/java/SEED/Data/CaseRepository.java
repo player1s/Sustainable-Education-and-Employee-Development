@@ -1,24 +1,32 @@
 package SEED.Data;
 
 import SEED.Model.Case;
+import SEED.Model.Company;
+import SEED.Model.Student;
+import SEED.Model.University;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class CaseRepository {
 
-    CompanyRepository companyRepository = new CompanyRepository();
-    private List<Case> ALL_CASES = Arrays.asList(
-            new Case(1, "case1",companyRepository.findById(1)),
-            new Case( 2,"case2",companyRepository.findById(1)),
-            new Case( 3,"case2",companyRepository.findById(1))
-    );
-
+	
+    private ArrayList<Case> ALL_CASES;
+    
+    
+    //constructor
+    public CaseRepository()
+    {
+    	ALL_CASES = new ArrayList <Case>();
+    }
+   
+    //getters   
     public List<Case> getAllElements(){
         return ALL_CASES;
     }
 
-    public Case findById(int id)
+    public Case getById(int id)
     {
         for(Case Case : ALL_CASES) {
             if(id == Case.getId())
@@ -26,4 +34,31 @@ public class CaseRepository {
         }
         return null;
     }
+
+
+     public void removeById(int id)
+     {
+    	 ALL_CASES.remove(getById(id)); //gets case by id and removes it
+    	 								//in terms of receiving 'null' won't do anything
+     }
+
+
+     //later planing to implement same method with less parameters (e.g. only update name )
+     public void updateElementById(int id, String caseName, Company company ,ArrayList<Student> studentlist, ArrayList<University> universityList )
+     {
+    	 Case c = getById(id);
+    	 try {
+     	   c.setId(id);
+     	   c.setName(caseName);
+     	   c.setCompany(company);
+     	   c.setStudentList(studentlist);
+     	   c.setUniversityList(universityList);
+    	 }
+    	 catch(NullPointerException e) {
+    		 System.out.print("Caught NullPointerException"); 
+    	 }
+    	
+     }
+
+     
 }
