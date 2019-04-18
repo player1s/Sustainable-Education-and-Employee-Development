@@ -1,19 +1,24 @@
 package SEED.Logic;
 
 import SEED.Data.CaseRepository;
+import SEED.Data.StudentRepository;
+import SEED.Model.Case;
 import SEED.Model.Company;
 import SEED.Model.University;
+
+import java.util.List;
 
 public class EventHandler {
 
     // take student name that is applying and to witch case name
     //update case with the info
     //the connection between the input and the logic is through thymeleaf
-    public void applyToCase(String caseName, String StudentName)
+    public void applyToCase(int caseID, int studentId)
     {
         CaseRepository caseRepo = new CaseRepository();
+        StudentRepository studentRepository = new StudentRepository();
 
-        /* caserepo.update for every incoming parameter once that is implemented */
+        caseRepo.studentApplies(studentRepository.findById(studentId),caseID);
     }
 
     //taking all the necessary info for setting up a new case.
@@ -23,6 +28,13 @@ public class EventHandler {
     {
         CaseRepository caseRepo = new CaseRepository();
 
-        /* caserepo.create for every incoming parameter once that is implemented */
+
     }
+   /*
+    public List<Case> listCases(University university)
+    {
+
+    }
+    
+    */
 }
