@@ -1,11 +1,23 @@
 package SEED.Model;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class Company {
+
+	private int id;
 	private String name;
-	private ArrayList<Company> companyList;
+
+
+	public Company(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;
@@ -15,18 +27,5 @@ public class Company {
 		this.name = name;
 	}
 
-	public Company(String name,) {
 
-		this.name = name;
-	}
-	
-	public setCompanyList(ArrayList<Company> companyList)
-	{
-		this.companyList = companyList;
-	}
-	
-	public getCompanyList(ArrayList<Company> companyList)
-	{
-		return companyList;
-	}
 }

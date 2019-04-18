@@ -10,7 +10,7 @@ public class CompanyRepository
 
 {
 
-	private Company comp = new Company;
+	private Company comp = new Company();
 	private CompanyRepository compRe = new CompanyRepository();
 
 	private List<Company> ALL_COMPANIES = Arrays.asList(new Company(1, "Company1"), new Company(2, "Company2"),
@@ -39,9 +39,9 @@ public class CompanyRepository
 
 		for (Company Company : ALL_COMPANIES) {
 			if (id == Company.getId())
-				 ALL_COMPANIES.remove(comp);
+				return Company;
 		}
-		return null;
+		return ALL_COMPANIES.remove(comp);
 
 	}
 

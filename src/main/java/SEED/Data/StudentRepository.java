@@ -1,6 +1,8 @@
 package SEED.Data;
 
+import SEED.Model.Company;
 import SEED.Model.Student;
+import SEED.Model.University;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,29 +30,31 @@ public class StudentRepository {
 
 	// Add a compay to the list
 	public Student addStudent(Student stud) {
-		ALL_COMPANIES.add(stud);
+		ALL_STUDENTS.add(stud);
 
 	}
 
 	// Remove a company from the list.
 	public Student removeStudent(int id) {
 
-		for (Student student : ALL_COMPANIES) {
+		for (Student student : ALL_STUDENTS) {
 			if (id == Student.getId())
-				 ALL_COMPANIES.remove(comp);
+				return Student;
 		}
-		return null;
+		return ALL_STUDENTS.remove(Student);
+
 	}
 
 	// Update a company
-	public void updateStudentById(int id, String studentName, ArrayList<University> ALL_UNIVERSITIES) {
+	public void updateStudentById(int id, String studentName, University university) {
 		Company c = getById(id);
 		try {
 			c.setId(id);
 			c.setName(studentName);
-			c.setUniversity(ALL_UNIVERSITIES);
+			c.setUniversity(university);
 		} catch (NullPointerException e) {
 			System.out.print("Caught NullPointerException");
 		}
 
+	}
 }

@@ -14,9 +14,6 @@ public class Case {
         this.id = id;
         this.caseName = name;
         this.company = company;
-        studentList = new ArrayList<Student>();
-        universityList = new ArrayList <University>();
-        
     }
     
     public int getId() {
@@ -43,22 +40,18 @@ public class Case {
         this.company = company;
     }
 
-
     public  ArrayList<Student> getStudentList() {
         return studentList;
     }
     
-    //needed for updating case
     public void setStudentList(ArrayList<Student> studentList) {
         this.studentList = studentList;
     }
-    
-    
+
     public  ArrayList<University> getUniversityList() {
         return universityList;
     }
     
-    //needed for updating the case
     public void setUniversityList(ArrayList<University> universityList) {
         this.universityList = universityList;
     }

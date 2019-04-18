@@ -1,22 +1,32 @@
 package SEED.Model;
 
-import java.util.List;
-
 public class Student
 
 {
-	
-    private String firstName;
-
+	private int id;
+    private String fname;
     private University university;
 
- 
-    public String getFirstName() {
-        return firstName;
+    public Student(int id, String fname, University university) {
+        this.id = id;
+        this.fname = fname;
+        this.university = university;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFname() {
+        return fname;
+    }
+
+    public void setFname(String fname) {
+        this.fname = fname;
     }
 
     public University getUniversity() {
@@ -27,12 +37,4 @@ public class Student
         this.university = university;
     }
 
-    public Student(String firstName,University university) {
-     
-        this.firstName = firstName;
-      
-        this.university = university;
-        
-        
-    }
 }
