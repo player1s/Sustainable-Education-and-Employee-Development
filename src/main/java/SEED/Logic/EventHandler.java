@@ -12,7 +12,6 @@ public class EventHandler {
     public void applyToCase(String caseName, String StudentName)
     {
         CaseRepository caseRepo = new CaseRepository();
-        
 
         /* caserepo.update for every incoming parameter once that is implemented */
     }

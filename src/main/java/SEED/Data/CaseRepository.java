@@ -60,5 +60,10 @@ public class CaseRepository {
     	
      }
 
+     public void studentApplies(Student student, int caseId)
+     {
+         getById(caseId).getStudentList().add(student);
+     }
+
      
 }

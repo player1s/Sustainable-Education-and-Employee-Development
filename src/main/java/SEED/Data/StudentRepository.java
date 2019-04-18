@@ -4,7 +4,6 @@ import SEED.Model.Company;
 import SEED.Model.Student;
 import SEED.Model.University;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,9 +11,10 @@ public class StudentRepository {
 
 	UniversityRepository unilist = new UniversityRepository();
 
-	private List<Student> ALL_STUDENTS = Arrays.asList(new Student(1, "joe", "average", unilist.findById(1)),
-			new Student(2, "frank", "alsoAverage", unilist.findById(1)),
-			new Student(3, "some", "notAverage", unilist.findById(2)));
+	private List<Student> ALL_STUDENTS = Arrays.asList(
+			new Student(1, "joe", unilist.getById(1)),
+			new Student(2, "frank", unilist.getById(1)),
+			new Student(3, "some", unilist.getById(2)));
 
 	public List<Student> getAllElements() {
 		return ALL_STUDENTS;
@@ -28,30 +28,24 @@ public class StudentRepository {
 		return null;
 	}
 
-	// Add a compay to the list
-	public Student addStudent(Student stud) {
-		ALL_STUDENTS.add(stud);
-
+	public void addStudent(Student student) {
+		ALL_STUDENTS.add(student);
 	}
 
-	// Remove a company from the list.
-	public Student removeStudent(int id) {
+	public void removeStudent(int id) {
 
 		for (Student student : ALL_STUDENTS) {
-			if (id == Student.getId())
-				return Student;
+			if (id == student.getId())
+				ALL_STUDENTS.remove(id);
 		}
-		return ALL_STUDENTS.remove(Student);
-
 	}
 
-	// Update a company
 	public void updateStudentById(int id, String studentName, University university) {
-		Company c = getById(id);
+		Student student = findById(id);
 		try {
-			c.setId(id);
-			c.setName(studentName);
-			c.setUniversity(university);
+			student.setId(id);
+			student.setFname(studentName);
+			student.setUniversity(university);
 		} catch (NullPointerException e) {
 			System.out.print("Caught NullPointerException");
 		}
