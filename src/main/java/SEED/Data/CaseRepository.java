@@ -12,13 +12,19 @@ import java.util.List;
 public class CaseRepository {
 
 	
-    private ArrayList<Case> ALL_CASES;
-    
-    
+    private List<Case> ALL_CASES;
+
+    CompanyRepository companyList = new CompanyRepository();
+
     //constructor
     public CaseRepository()
     {
     	ALL_CASES = new ArrayList <Case>();
+
+        // filler data
+        ALL_CASES.add(new Case(1, "Website", companyList.findById(1)));
+        ALL_CASES.add(new Case(2, "Design", companyList.findById(2)));
+        ALL_CASES.add(new Case(3, "Market", companyList.findById(1)));
     }
    
     //getters   

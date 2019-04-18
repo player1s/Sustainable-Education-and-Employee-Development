@@ -2,16 +2,22 @@ package SEED.Data;
 
 import SEED.Model.University;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class UniversityRepository {
 	
-	private ArrayList<University> ALL_UNIVERSITIES;
+	private List<University> ALL_UNIVERSITIES;
+
 
 	 //constructor
 	public UniversityRepository()
     {
 		ALL_UNIVERSITIES = new ArrayList <University>();
+
+        new University(1, "university1");
+        new University(2, "university2");
+        new University(3, "university3");
 	}
 
 	public List<University> getAllElements(){

@@ -11,10 +11,15 @@ public class StudentRepository {
 
 	UniversityRepository unilist = new UniversityRepository();
 
-	private List<Student> ALL_STUDENTS = Arrays.asList(
-			new Student(1, "joe", unilist.getById(1)),
-			new Student(2, "frank", unilist.getById(1)),
-			new Student(3, "some", unilist.getById(2)));
+	private List<Student> ALL_STUDENTS;
+
+
+	public StudentRepository() {
+		// filler data
+		ALL_STUDENTS.add(new Student(1, "joe", unilist.getById(1)));
+		ALL_STUDENTS.add(new Student(2, "frank", unilist.getById(1)));
+		ALL_STUDENTS.add(new Student(3, "soma", unilist.getById(2)));
+	}
 
 	public List<Student> getAllElements() {
 		return ALL_STUDENTS;

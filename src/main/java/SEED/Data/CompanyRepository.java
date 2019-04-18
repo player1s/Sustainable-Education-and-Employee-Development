@@ -2,14 +2,18 @@ package SEED.Data;
 
 import SEED.Model.Company;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CompanyRepository
 {
-	private List<Company> ALL_COMPANIES = Arrays.asList(new Company(1, "Company1"), new Company(2, "Company2"),
-			new Company(3, "Company3"));
+	private List<Company> ALL_COMPANIES;
+
+	public CompanyRepository() {
+		// filler data
+		ALL_COMPANIES.add(new Company(1, "Company1"));
+		ALL_COMPANIES.add(new Company(2, "Company2"));
+		ALL_COMPANIES.add(new Company(3, "Company3"));
+	}
 
 	public List<Company> getAllElements() {
 		return ALL_COMPANIES;
