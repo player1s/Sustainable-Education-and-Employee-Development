@@ -10,9 +10,12 @@ public class CompanyRepository
 
 	public CompanyRepository() {
 		// filler data
+		/*
 		ALL_COMPANIES.add(new Company(1, "Company1"));
 		ALL_COMPANIES.add(new Company(2, "Company2"));
 		ALL_COMPANIES.add(new Company(3, "Company3"));
+
+		 */
 	}
 
 	public List<Company> getAllElements() {
